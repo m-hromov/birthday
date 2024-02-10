@@ -10,7 +10,7 @@ window.onunload = function(){
 window.onload = function(){
     let raw = localStorage.getItem(KEY)
     let count = 1
-    if (raw != null && !isNaN(raw)) {
+    if (raw) {
         count = parseInt(raw)+1
     }
     localStorage.setItem(KEY, count.toString());
