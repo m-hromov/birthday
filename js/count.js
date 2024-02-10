@@ -1,8 +1,9 @@
 const KEY = "count1234"
 
 window.onunload = function(){
-    let count = parseInt(localStorage.getItem(KEY))-1
+    let count = parseInt(localStorage.getItem(KEY))
     if (count >= 1) {
+        count -=1;
         localStorage.setItem(KEY, count.toString());
     }
 }
