@@ -20,12 +20,15 @@ window.onload = function(){
         new bootstrap.Modal(document.querySelector("#exampleModal")).show();
     }
 }
+
 const textEl = document.querySelector("#text")
 document.querySelector("#button-addon2").onclick = function () {
     let text = textEl.value
     let correct = text != null && ( text.toLowerCase().includes("чіпі чіпі") || text.toLowerCase().includes("чіпі-чіпі"))
     if (correct) {
         window.location.replace(window.location + "/cat.html");
+    } else {
+        alert("Щось не так - спробуй ще")
     }
 }
 
